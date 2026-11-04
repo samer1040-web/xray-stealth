@@ -40,7 +40,8 @@ cat >/etc/xray.json <<EOF
     "rules": [
       { "type": "field", "ip": ["geoip:private"], "outboundTag": "block" },
       { "type": "field", "protocol": ["bittorrent"], "outboundTag": "block" },
-      { "type": "field", "port": "25,465,587,135,137,138,139,445", "outboundTag": "block" }
+      { "type": "field", "port": "25,465,587,135,137,138,139,445", "outboundTag": "block" },
+      { "type": "field", "network": "udp", "port": "443", "outboundTag": "block" }
     ]
   }
 }
